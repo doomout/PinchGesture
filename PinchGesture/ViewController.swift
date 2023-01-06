@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var txtPinch: UILabel!
+    @IBOutlet var imgPinch: UIImageView!
     
     var initialFontSize : CGFloat! //글자 크기 변수
     
@@ -15,13 +15,11 @@ class ViewController: UIViewController {
     }
 
     @objc func doPinch(_ pinch: UIPinchGestureRecognizer) {
-        //우선 핀치 제스처의 상태를 state 속성을 사용하여 확인한다.
-        if(pinch.state == UIGestureRecognizer.State.began) {
-            //핀치 제스처의 상태가 시작이면 앞에서 선언한 변수에 현재 텍스트의 글자 크기를 저장한다.
-            initialFontSize = txtPinch.font.pointSize
-        } else {
-            txtPinch.font = txtPinch.font.withSize(initialFontSize * pinch.scale)
-        }
+        //이미지를 scale에 맞게 변환한다.
+        imgPinch.transform = imgPinch.transform.scaledBy(x: pinch.scale, y: pinch.scale)
+        
+        //다음 변환을 위해 핀치의 스케일 속성을 1로 설정
+        pinch.scale = 1
     }
 }
 

@@ -16,24 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-Ah-gWn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="UT7-JR-FWE">
                                 <rect key="frame" x="16" y="48" width="382" height="814"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gpS-Ah-gWn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HZ2-4H-Ajf"/>
-                            <constraint firstItem="gpS-Ah-gWn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OfH-WE-WCp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gpS-Ah-gWn" secondAttribute="trailing" constant="16" id="T7H-Fd-11S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gpS-Ah-gWn" secondAttribute="bottom" id="yD4-Qp-xKv"/>
+                            <constraint firstItem="UT7-JR-FWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BNH-2E-XZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UT7-JR-FWE" secondAttribute="trailing" constant="16" id="HER-7g-7pu"/>
+                            <constraint firstItem="UT7-JR-FWE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZvT-vi-Egy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UT7-JR-FWE" secondAttribute="bottom" id="ih5-bq-b06"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="txtPinch" destination="gpS-Ah-gWn" id="ZZZ-1o-oXv"/>
+                        <outlet property="imgPinch" destination="UT7-JR-FWE" id="qtD-8D-hoN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,6 +39,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1.jpeg" width="960" height="652"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
